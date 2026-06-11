@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@600&display=swap');
+@import "tailwindcss";
+
+:root {
+  --theme-background: #0f120e;
+  --theme-on-background: #e2e3dd;
+  --theme-surface: #0f120e;
+  --theme-on-surface: #e2e3dd;
+  --theme-surface-variant: #283026;
+  --theme-on-surface-variant: #bec9b9;
+  --theme-surface-card: #151a14;
+  --theme-surface-border: #2a3328;
+  --theme-surface-container: #171d15;
+  --theme-surface-container-low: #121610;
+  --theme-surface-container-high: #1c241a;
+  
+  --theme-primary: #FDE884;
+  --theme-on-primary: #382D00;
+  --theme-primary-container: #EBB60D;
+  --theme-on-primary-container: #423200;
+  
+  --theme-secondary: #BAE8B1;
+  --theme-on-secondary: #083808;
+  --theme-secondary-container: #4AA443;
+  --theme-on-secondary-container: #0B420B;
+
+  --theme-tertiary: #FFD1C1;
+  --theme-on-tertiary: #4A1603;
+  --theme-tertiary-container: #D15A36;
+  --theme-on-tertiary-container: #401100;
+  
+  --theme-error: #ffb4ab;
+  --theme-on-error: #690005;
+  --theme-error-container: #93000a;
+  --theme-on-error-container: #ffdad6;
+  
+  --theme-text-primary: #f2f5ec;
+  --theme-text-secondary: #a1ab9c;
+}
+
+@theme {
+  /* Farm Dynamic Theme Variables */
+  --color-background: var(--theme-background);
+  --color-on-background: var(--theme-on-background);
+  --color-surface: var(--theme-surface);
+  --color-on-surface: var(--theme-on-surface);
+  --color-surface-variant: var(--theme-surface-variant);
+  --color-on-surface-variant: var(--theme-on-surface-variant);
+  --color-surface-card: var(--theme-surface-card);
+  --color-surface-border: var(--theme-surface-border);
+  --color-surface-container: var(--theme-surface-container);
+  --color-surface-container-low: var(--theme-surface-container-low);
+  --color-surface-container-high: var(--theme-surface-container-high);
+  
+  --color-primary: var(--theme-primary);
+  --color-on-primary: var(--theme-on-primary);
+  --color-primary-container: var(--theme-primary-container);
+  --color-on-primary-container: var(--theme-on-primary-container);
+  
+  --color-secondary: var(--theme-secondary);
+  --color-on-secondary: var(--theme-on-secondary);
+  --color-secondary-container: var(--theme-secondary-container);
+  --color-on-secondary-container: var(--theme-on-secondary-container);
+
+  --color-tertiary: var(--theme-tertiary);
+  --color-on-tertiary: var(--theme-on-tertiary);
+  --color-tertiary-container: var(--theme-tertiary-container);
+  --color-on-tertiary-container: var(--theme-on-tertiary-container);
+  
+  --color-error: var(--theme-error);
+  --color-on-error: var(--theme-on-error);
+  --color-error-container: var(--theme-error-container);
+  --color-on-error-container: var(--theme-on-error-container);
+  
+  --color-status-critical: #EF4444;
+  --color-status-breeding: #EAB308;
+  --color-status-success: #22C55E;
+  
+  --color-text-primary: var(--theme-text-primary);
+  --color-text-secondary: var(--theme-text-secondary);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Custom Spacing from the design system */
+  --spacing-container: 1rem;
+  --spacing-stack: 1.125rem; /* Increased space between cards */
+  --spacing-card-padding: 1.25rem;
+  --spacing-section: 2rem;
+}
+
+@layer base {
+  html {
+    font-size: 17px; /* Légère augmentation de la taille par défaut (habituellement 16px) */
+  }
+  
+  body {
+    @apply bg-background text-on-surface font-sans;
+  }
+  
+  /* Amélioration de l'accessibilité : focus visible global pour la navigation au clavier */
+  *:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* AI Studio Focus Mode */
+div#root:nth-of-type(1) > div:nth-of-type(1) > main#main-content:nth-of-type(1) > div:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) {
+  color: #fbbf24 !important;
+}

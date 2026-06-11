@@ -1,0 +1,8 @@
+{
+  "name": "Lapin Manager",
+  "description": "Application personnelle de gestion d'élevage de lapins. Offline-first avec synchronisation temporelle Supabase.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
